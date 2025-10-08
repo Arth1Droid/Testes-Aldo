@@ -15,3 +15,14 @@ class Exemplar:
 
     def getQtdeEmprestimo(self):
         return self.__qtdeEmprestimo
+
+
+    def alterar_status(self, novo_status):
+        if self.__status == '3':
+            if novo_status == '4':       
+                self.__status = '4'
+                return True
+            else:
+                return False             
+        self.__status = novo_status
+        return True
